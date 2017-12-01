@@ -77,4 +77,7 @@ theme: chan
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+ type: git
+ repo: https://git.coding.net/dsphoebe/panda.git
+ branch: master
+ message: blog update
