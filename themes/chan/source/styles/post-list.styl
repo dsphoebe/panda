@@ -1,0 +1,32 @@
+.post-list {
+  position: relative;
+  padding-left: 0;
+  border-left: 8px solid #f1fa00;
+  .post-list-item {
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  .article-info {
+    font-size: 13px;
+  }
+  .article-entry {
+    font-size: 14px;
+  }
+  &:nth-child(2n) {
+    border-left-color: #7dfa00;
+  }
+  &:nth-child(3n) {
+    border-left-color: #0099fa;
+  }
+  &:nth-child(4n) {
+    border-left-color: #eb00fa;
+  }
+}
+
+@media mq-mobile {
+  .post-list {
+    .post-list-item {
+      padding-left: 8px;
+    }
+  }
+}
