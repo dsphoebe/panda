@@ -79,5 +79,5 @@ theme: chan
 deploy:
  type: git
  repo: https://git.coding.net/dsphoebe/panda.git
- branch: master
+ branch: coding-pages
  message: blog update
