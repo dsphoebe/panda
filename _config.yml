@@ -83,5 +83,5 @@ deploy:
    message: blog update
  - type: git
    repo: https://github.com/dsphoebe/panda.git
-   branch: github-pages
+   branch: gh-pages
    message: blog update
