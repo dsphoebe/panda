@@ -81,7 +81,3 @@ deploy:
    repo: https://git.coding.net/dsphoebe/panda.git
    branch: coding-pages
    message: blog update
- - type: git
-   repo: https://github.com/dsphoebe/panda.git
-   branch: gh-pages
-   message: blog update
