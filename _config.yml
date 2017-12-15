@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 我的宝贝 胖达
-subtitle: 宝贝，宝贝，我亲爱的宝贝 <3 ~
+title: 胖达
+subtitle: 
 description: 
 author: 
 language: zh-CN
@@ -61,8 +61,8 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+date_format: YYYY年MM月DD日
+time_format: HH点mm分ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: chan
+theme: panda-themes
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
