@@ -35,7 +35,20 @@
         p
             line-height: 2
             text-align: center
+        .photos-1
+            width: 35vw
+            margin: auto
+            img
+                width: 100%
         img
             margin: 1rem
             width: 20vw
             background: #ddd
+
+@media screen and (max-width: 640px)
+    #container .article
+        [class^=photo]
+            width: 100%
+        img
+            width: 100%
+            margin: 1rem 0
