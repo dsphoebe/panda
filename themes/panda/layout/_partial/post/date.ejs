@@ -1,1 +1,32 @@
-<span class="borned"><%= post.date.diff('2017-03-25', 'days') %>天</span>
+<% var PandaBirthday = '2017-03-26' %>
+<% var startDay = '2017-03-25' %>
+<% var years = post.date.diff(startDay, 'years') %>
+
+<% var diffmonths = post.date.diff(startDay, 'months') %>
+<% var months = diffmonths - years * 12 %>
+
+<% var to_months_date = moment(startDay).add(months, 'months') %>
+<% var diffDays_to_months_date = to_months_date.diff(startDay, 'days') %>
+<% var diffDays = post.date.diff(startDay, 'days') %>
+
+<% var days = diffDays - diffDays_to_months_date %>
+
+<% if (diffDays == 100) {%>
+<span class="borned">百天啦</span>
+<% }else if (!years && !months && days == 15) {%>
+<span class="borned">半个月</span>
+<% }else if (!years && !months && days) {%>
+<span class="borned"><%= days%>天</span>
+<% }else if (!years && months == 1 && !days) {%>
+<span class="borned">满月啦</span>
+<% }else if (!years && months && !days) {%>
+<span class="borned"><%= months%>个月</span>
+<% }else if (!years && months && days== 15) {%>
+<span class="borned"><%= months%>个半月</span>
+<% }else if (!years && months && days) {%>
+<span class="borned"><%= months%>个月<%= days%>天</span>
+<% }else if(years && !months && !days) {%>
+<span class="borned"><%= years%>岁啦</span>
+<% }else if(years && months && days) {%>
+<span class="borned"><%= years%>岁<%= months%>个月<%= days%>天</span>
+<% } %>
