@@ -12,21 +12,21 @@
 <% var days = diffDays - diffDays_to_months_date %>
 
 <% if (diffDays == 100) {%>
-<span class="borned">百天啦</span>
+<a href="<%= post.link || post.path%>" class="borned">百天啦</a>
 <% }else if (!years && !months && days == 15) {%>
-<span class="borned">半个月</span>
+<a href="<%= post.link || post.path%>" class="borned">半个月</a>
 <% }else if (!years && !months && days) {%>
-<span class="borned"><%= days%>天</span>
+<a href="<%= post.link || post.path%>" class="borned"><%= days%>天</a>
 <% }else if (!years && months == 1 && !days) {%>
-<span class="borned">满月啦</span>
+<a href="<%= post.link || post.path%>" class="borned">满月啦</a>
 <% }else if (!years && months && !days) {%>
-<span class="borned"><%= months%>个月</span>
+<a href="<%= post.link || post.path%>" class="borned"><%= months%>个月</a>
 <% }else if (!years && months && days== 15) {%>
-<span class="borned"><%= months%>个半月</span>
+<a href="<%= post.link || post.path%>" class="borned"><%= months%>个半月</a>
 <% }else if (!years && months && days) {%>
-<span class="borned"><%= months%>个月<%= days%>天</span>
+<a href="<%= post.link || post.path%>" class="borned"><%= months%>个月<%= days%>天</a>
 <% }else if(years && !months && !days) {%>
-<span class="borned"><%= years%>岁啦</span>
+<a href="<%= post.link || post.path%>" class="borned"><%= years%>岁啦</a>
 <% }else if(years && months && days) {%>
-<span class="borned"><%= years%>岁<%= months%>个月<%= days%>天</span>
+<a href="<%= post.link || post.path%>" class="borned"><%= years%>岁<%= months%>个月<%= days%>天</a>
 <% } %>
