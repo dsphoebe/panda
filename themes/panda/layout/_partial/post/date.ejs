@@ -1,13 +1,12 @@
 <% var PandaBirthday = '2017-03-26' %>
-<% var startDay = '2017-03-25' %>
-<% var years = post.date.diff(startDay, 'years') %>
+<% var years = post.date.diff(PandaBirthday, 'years') %>
 
-<% var diffmonths = post.date.diff(startDay, 'months') %>
+<% var diffmonths = post.date.diff(PandaBirthday, 'months') %>
 <% var months = diffmonths - years * 12 %>
 
-<% var to_months_date = moment(startDay).add(months, 'months') %>
-<% var diffDays_to_months_date = to_months_date.diff(startDay, 'days') %>
-<% var diffDays = post.date.diff(startDay, 'days') %>
+<% var to_months_date = moment(PandaBirthday).add(months, 'months') %>
+<% var diffDays_to_months_date = to_months_date.diff(PandaBirthday, 'days') %>
+<% var diffDays = post.date.diff(PandaBirthday, 'days') %>
 
 <% var days = diffDays - diffDays_to_months_date %>
 
