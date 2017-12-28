@@ -9,23 +9,25 @@
 <% var diffDays = post.date.diff(PandaBirthday, 'days') %>
 
 <% var days = diffDays - diffDays_to_months_date %>
-
-<% if (diffDays == 100) {%>
-<a href="<%= post.link || post.path%>" class="borned">百天啦</a>
+<% if (days == 0) {%>
+<a href="<%- url_for(post.path) %>" class="borned">Hello world</a>
+<% } else if (diffDays == 100) {%>
+<a href="<%- url_for(post.path) %>" class="borned">百天啦</a>
 <% }else if (!years && !months && days == 15) {%>
-<a href="<%= post.link || post.path%>" class="borned">半个月</a>
+<a href="<%- url_for(post.path) %>" class="borned">半个月</a>
 <% }else if (!years && !months && days) {%>
-<a href="<%= post.link || post.path%>" class="borned"><%= days%>天</a>
+<a href="<%- url_for(post.path) %>" class="borned"><%= days%>天</a>
 <% }else if (!years && months == 1 && !days) {%>
-<a href="<%= post.link || post.path%>" class="borned">满月啦</a>
+<a href="<%- url_for(post.path) %>" class="borned">满月啦</a>
 <% }else if (!years && months && !days) {%>
-<a href="<%= post.link || post.path%>" class="borned"><%= months%>个月</a>
+<a href="<%- url_for(post.path) %>" class="borned"><%= months%>个月</a>
 <% }else if (!years && months && days== 15) {%>
-<a href="<%= post.link || post.path%>" class="borned"><%= months%>个半月</a>
+<a href="<%- url_for(post.path) %>" class="borned"><%= months%>个半月</a>
 <% }else if (!years && months && days) {%>
-<a href="<%= post.link || post.path%>" class="borned"><%= months%>个月<%= days%>天</a>
+<a href="<%- url_for(post.path) %>" class="borned"><%= months%>个月<%= days%>天</a>
 <% }else if(years && !months && !days) {%>
-<a href="<%= post.link || post.path%>" class="borned"><%= years%>岁啦</a>
+<a href="<%- url_for(post.path) %>" class="borned"><%= years%>岁啦</a>
 <% }else if(years && months && days) {%>
-<a href="<%= post.link || post.path%>" class="borned"><%= years%>岁<%= months%>个月<%= days%>天</a>
+<a href="<%- url_for(post.path) %>" class="borned"><%= years%>岁<%= months%>个月<%= days%>天</a>
 <% } %>
+<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
