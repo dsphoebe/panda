@@ -30,7 +30,7 @@
         width: 85%
         margin: 0 auto 2rem
         background: #eee
-        border-radius: 1rem
+        border-radius: .5rem
         padding: 2rem
         h1[itemprop="name"]
             font-size: 1rem
@@ -56,6 +56,23 @@
             display: block
             font-size: 1rem
             color: grey
+
+#page-nav
+    text-align:center
+    .page-number
+        display: inline-block
+        width: 1rem
+        height: 1rem
+        padding: 1rem
+        line-height: 1rem
+        border-radius: 100%
+        margin: 0 .25rem
+        background: #000
+        border: 1px solid #000
+        color: #fff
+    .current
+        background: #fff
+        color: #000
 
 @media screen and (max-width: 640px)
     #container .article
