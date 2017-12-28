@@ -9,7 +9,7 @@
 <% var diffDays = post.date.diff(PandaBirthday, 'days') %>
 
 <% var days = diffDays - diffDays_to_months_date %>
-<% if (days == 0) {%>
+<% if (!years && !months && days == 0) {%>
 <a href="<%- url_for(post.path) %>" class="borned">Hello world</a>
 <% } else if (diffDays == 100) {%>
 <a href="<%- url_for(post.path) %>" class="borned">百天啦</a>
