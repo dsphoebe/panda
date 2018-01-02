@@ -3,6 +3,13 @@
     src: url('../wawati-w5.ttf') format('truetype');
 }
 
+h1,
+menu,
+ul,
+li
+    margin: 0
+    padding: 0
+
 #container
     font-family: "panda"
     font-size: 1.25rem
@@ -15,6 +22,13 @@
 
     #header
         margin: 2rem 0
+        text-align: center
+        menu 
+            li
+                display: inline-block
+                padding: 0 1rem
+                &:not(:last-child)
+                    border-right: 2px solid #000
     #logo
         font-size: 3rem
         > *
@@ -33,7 +47,6 @@
         border-radius: .5rem
         padding: 2rem
         h1[itemprop="name"]
-            font-size: 1rem
             font-weight: normal
         .borned
             font-size: 2rem
@@ -73,6 +86,105 @@
     .current
         background: #fff
         color: #000
+
+#footer
+    text-align: center
+    font-size: 1rem
+    margin: 3rem 0 2rem
+
+.archive-article-title
+    font-size: 1.2rem
+    &:before
+        content: '。'
+
+.panda-banner
+    margin: 2rem 2.5rem 4rem
+    .img-wrapper
+        position: relative
+        img
+            width: 100%
+        &:before,
+        &:after
+            position: absolute
+            width: 4.5rem
+            height: 1.5rem
+            content: ''
+            background: rgba(255,156,163,.45)
+        &:before
+            transform: rotate(-45deg)
+            top: -2%
+            left: -7%
+            box-shadow: 89px 587px 0 rgba(255,156,163,0.45)
+        &:after
+            transform: rotate(45deg)
+            bottom: -2%
+            box-shadow: 87px -589px 0 rgba(255,156,163,0.45)
+            left: -7%
+    .img-wrapper,
+    figcaption
+        display: inline-block
+        vertical-align: middle
+    .img-wrapper
+        width: 50%
+    figcaption
+        line-height: 1.5
+        width: 25%
+        margin: 10%
+
+.v-1-index-title
+    color: #ff9ca3
+    font-weight: normal
+
+.new-get
+    ul
+        padding: 1rem 1rem 3rem
+    li
+        list-style: none
+        line-height: 1.5
+
+.guardians
+    ul
+        padding: 0 0 0 1rem
+    li
+        display: inline-block
+        border: 1px solid #ddd
+        box-shadow: 5px 5px 5px rgba(0,0,0,.2)
+        width: 16%
+        margin-right: 1rem
+        text-align: center
+        position: relative
+        font-size: 1rem
+        img
+            width: 100%
+            vertical-align: middle
+        .name
+            position: absolute
+            white-space: nowrap
+            text-align: right
+            left: 0
+            width: 100%
+
+.learn
+    ul
+        padding: 1rem 1rem 3rem
+    li
+        list-style: none
+
+.checkin
+    .imgs
+        padding: 1rem 1rem 0
+    img
+        border: 1px solid #ddd
+        position: relative
+        z-index: 2
+        &:last-child
+            z-index: 1
+            top: -4rem
+            right: -30rem
+            
+
+.latest
+    margin-bottom: 3rem
 
 @media screen and (max-width: 640px)
     #container .article

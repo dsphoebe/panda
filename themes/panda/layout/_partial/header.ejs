@@ -1,6 +1,13 @@
 <header id="header">
-  <a href="<%- url_for() %>" id="logo">
+  <h1 href="<%- url_for() %>" id="logo">
     <img src="<%= theme.logo %>" />
     胖达
-  </a>
+  </h1>
+  <menu>
+    <ul>
+      <% for (var i in theme.menu){ %>
+      <li><a href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a></li>
+      <% } %>
+    </ul>
+  </menu>
 </header>
