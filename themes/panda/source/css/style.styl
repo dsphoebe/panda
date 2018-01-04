@@ -102,10 +102,8 @@ li
 
 .panda-banner
     margin: 2rem 2.5rem 4rem
-    .img-wrapper
-        position: relative
-        img
-            width: 100%
+    .img-wrapper,
+    .img-wrapper-inner
         &:before,
         &:after
             position: absolute
@@ -113,16 +111,27 @@ li
             height: 1.5rem
             content: ''
             background: rgba(255,156,163,.45)
+    .img-wrapper
+        position: relative
+        img
+            width: 100%
         &:before
             transform: rotate(-45deg)
             top: -2%
             left: -7%
-            box-shadow: 89px 587px 0 rgba(255,156,163,0.45)
         &:after
             transform: rotate(45deg)
             bottom: -2%
-            box-shadow: 87px -589px 0 rgba(255,156,163,0.45)
             left: -7%
+    .img-wrapper-inner
+        &:before
+            transform: rotate(45deg)
+            top: -2%
+            right: -7%
+        &:after
+            transform: rotate(-45deg)
+            bottom: -2%
+            right: -7%
     .img-wrapper,
     figcaption
         display: inline-block
@@ -174,6 +183,8 @@ li
         list-style: none
 
 .checkin
+    ul
+        display: none
     .imgs
         padding: 1rem 1rem 0
     img
@@ -200,4 +211,27 @@ li > ul
         img
             width: 100%
             margin: 1rem 0
+    .panda-banner
+        margin: 1rem
+        padding: 0
+        .img-wrapper,
+        .img-wrapper-inner
+            &:before,
+            &:after
+                width: 3rem
+                height: 1rem
+        .img-wrapper
+            width: 100%
+        figcaption
+            width: 100%
+            margin: 0
+            text-align: center
+            li
+                display: inline-block
+    .checkin
+        margin: 0 0 3rem
+        .imgs
+            display: none
+        ul
+            display: block
             
