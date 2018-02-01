@@ -1,3 +1,14 @@
+<% var PandaBirthday = '2017-03-26' %>
+<% var years = moment().diff(PandaBirthday, 'years') %>
+
+<% var diffmonths = moment().diff(PandaBirthday, 'months') %>
+<% var months = diffmonths - years * 12 %>
+
+<% var to_months_date = moment(PandaBirthday).add(months, 'months') %>
+<% var diffDays_to_months_date = to_months_date.diff(PandaBirthday, 'days') %>
+<% var diffDays = moment().diff(PandaBirthday, 'days') %>
+
+<% var days = diffDays - diffDays_to_months_date %>
 <figure class="panda-banner">
     <div class="img-wrapper">
         <div class="img-wrapper-inner">
@@ -8,7 +19,27 @@
         <h1>胖达</h1>
         <ul>
             <li>男</li>
-            <li>9个月</li>
+            <% if (!years && !months && days == 0) {%>
+            <li>Hello world</li>
+            <% } else if (diffDays == 100) {%>
+            <li>百天啦</li>
+            <% }else if (!years && !months && days == 15) {%>
+            <li>半个月</li>
+            <% }else if (!years && !months && days) {%>
+            <li><%= days%>天</li>
+            <% }else if (!years && months == 1 && !days) {%>
+            <li>满月啦</li>
+            <% }else if (!years && months && !days) {%>
+            <li><%= months%>个月</li>
+            <% }else if (!years && months && days== 15) {%>
+            <li><%= months%>个半月</li>
+            <% }else if (!years && months && days) {%>
+            <li><%= months%>个月<%= days%>天</li>
+            <% }else if(years && !months && !days) {%>
+            <li><%= years%>岁啦</li>
+            <% }else if(years && months && days) {%>
+            <li><%= years%>岁<%= months%>个月<%= days%>天</li>
+            <% } %>
             <li>22斤</li>
             <li>77cm</li>
             <li>最爱吃手机</li>
