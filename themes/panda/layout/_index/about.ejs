@@ -4,7 +4,7 @@
 <% var diffmonths = moment().diff(PandaBirthday, 'months') %>
 <% var months = diffmonths - years * 12 %>
 
-<% var to_months_date = moment(PandaBirthday).add(months, 'months') %>
+<% var to_months_date = moment(PandaBirthday).add(months, 'months').add(years, 'year') %>
 <% var diffDays_to_months_date = to_months_date.diff(PandaBirthday, 'days') %>
 <% var diffDays = moment().diff(PandaBirthday, 'days') %>
 
@@ -40,9 +40,9 @@
             <% }else if(years && months && days) {%>
             <li><%= years%>岁<%= months%>个月<%= days%>天</li>
             <% } %>
-            <li>22斤</li>
-            <li>77cm</li>
-            <li>最爱吃纸箱</li>
+            <li>26斤</li>
+            <li>82cm</li>
+            <li><del>最爱吃纸箱</del>吃📦前先偷瞄一眼爸妈，没有反对就吭来一口... </li>
             <li>爱侧卧</li>
         </ul>
     </figcaption>
