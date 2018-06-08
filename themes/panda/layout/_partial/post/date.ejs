@@ -4,7 +4,7 @@
 <% var diffmonths = post.date.diff(PandaBirthday, 'months') %>
 <% var months = diffmonths - years * 12 %>
 
-<% var to_months_date = moment(PandaBirthday).add(months, 'months') %>
+<% var to_months_date = moment(PandaBirthday).add(months, 'months').add(years, 'year') %>
 <% var diffDays_to_months_date = to_months_date.diff(PandaBirthday, 'days') %>
 <% var diffDays = post.date.diff(PandaBirthday, 'days') %>
 
