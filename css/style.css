@@ -16,6 +16,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  border: 1px dashed #808080;
+  padding: 0.5rem;
+}
 #container {
   font-family: "panda";
   font-size: 1.25rem;
