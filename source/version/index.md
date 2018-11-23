@@ -2,7 +2,7 @@
 title: 为什么花儿那么香，因为我
 date: 2018-01-04 12:45:11
 ---
-![](http://20170326.com/28601539669396_.pic_hd.jpg)
+![](http://20170326.com/28601539669396_.pic_hd.jpg)![](/images/moon.jpg)
 ![](http://20170326.com/zoo.jpg)
 ![](http://20170326.com/teeth2.jpg)
 ![](http://20170326.com/truth.jpg)
